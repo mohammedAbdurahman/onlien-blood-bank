@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Hello, world!</title>
+<title>Donor Registration</title>
 		<!-- Bootsttrap CSS -->
 		<link rel='stylesheet' href='css/bootstrap.css'/>
 		 <link rel='stylesheet' href='css/all.min.css'/>
@@ -33,8 +33,9 @@
 	<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="home.html">Home <span class="sr-only">(current)</span></a></li>
-				<li><a href="">Donor</a></li>
-			 <li><a href="#">Patient</a></li>
+        <li><a href="blood bank.html">Blood Bank</a></li>
+        <li><a href="donorhome.html">Donor</a></li>
+       <li><a href="Patient.html">Patient</a></li>
 			 <li><a href="#">Report</a></li>
 			 <li><a href="#">About us</a></li>
 			</ul>
@@ -54,79 +55,74 @@
 	<div class="content-doner">
 	 <div class="container ">
 <h2>Donor Registration</h2>
-<div id="containerDiv">
-<form name="Donor" id="Donor" method="post" enctype="multipart/form-data" novalidate="novalidate">
- <input type="hidden" name="donor_id" id="donor_id">
-<input type="hidden" name="uname" id="uname">    
- <input type="hidden" name="state_id" id="state_id">
-<input type="hidden" name="district_id" id="district_id">
-<input type="hidden" name="city_id" id="city_id">
+<div class="containerDiv">
+<form action="insert.php" method="post">
+ 
 	<div class="row">
 		<div class="form-group col-md-6">
 			<div class="col-md-3">
 				<label>Name</label>
 			</div>
 	<div class="col-md-9">
-		 <input type="text" name="txtDonname" id="txtDonname" class="form-control" maxlength="50" placeholder="Enter name" required="" aria-required="true" autocomplete="off">
+		 <input type="text" name="fname"  class="form-control" maxlength="50" placeholder="Enter name" required="" aria-required="true" autocomplete="off">
 	 </div>
 	 </div>
-		<div class="form-group col-md-6">
+	<div class="form-group col-md-6">
 			<div class="col-md-3">
 				<label>Email ID </label>
 			</div>
 		<div class="col-md-9">
-			 <input type="text" name="email_id" id="email_id" class="form-control" maxlength="100" placeholder="Enter email" autocomplete="off">
+			 <input type="text" name="email_id"  class="form-control" maxlength="100" placeholder="Enter email" autocomplete="off">
 				<label id="emailduplicate" class="error" for="email_id" style="display: none;">Email already exist,Please try any other Email.
 			</label>
 		 </div>
 		 </div>
 		 </div>
-	 <div class="row">
+		 <div class="row">
 			<div class="form-group col-md-6">
 				<div class="col-md-3">
 					<label for="mobile">Mobile Number</label>
 				</div>
 			<div class="col-md-9"> <!-- checkUserName(this.value,'uname') checkUserMobile(this.value,'mobileno') -->
 				<div style="width:17%; margin-right: 1%;" class="form-control pull-left">249</div>
-<input type="text" name="mobileno" id="mobileno" class="form-control mobile" maxlength="10" placeholder="Enter mobile number" onblur="checkUserName(this.value,'uname'), fillUserName(this.value)" style="width:82%"utocomplete="off">
+<input type="text" name="mobile"  class="form-control mobile" maxlength="10" placeholder="Enter mobile number" onblur="checkUserName(this.value,'uname'), fillUserName(this.value)" style="width:82%"utocomplete="off">
 <label id="mobilenoduplicate" class="error" for="mobileno" style="display: none;">Mobile already exist,Please try any other mobile no</label>
 <input type="hidden" id="hdnUserMobileVal" name="hdnUserMobileVal">
 																		 
 </div>
 </div>
+
 <div class="form-group col-md-6">
 <div class="col-md-3">
 <label for="area">Address</label>
 </div>
 <div class="col-md-9">
-<input type="text" class="form-control " name="area" id="area" placeholder="Enter Address" autocomplete="off">
+<input type="text" class="form-control " name="address" placeholder="Enter Address" autocomplete="off">
 		</div>
 </div>
 
-</div>  
-																										
+</div>
 <div class="row">
 <div class="form-group col-md-6">
 <div class="col-md-3">
 <label>Gender </label>
 </div>
 <div class="col-md-9">
-<label class="radio-inline">
-<input type="radio" value="1" id="selGender1" name="selGender">Male 
-</label>
-<label class="radio-inline">
-<input type="radio" value="2" id="selGender2" name="selGender">Female 
-</label>
+<select class="form-control" name="gender">
+        <option value="volvo">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
 																		
 </div>
 	</div>
-	<div class="form-group col-md-6">
+<div class="form-group col-md-6">
  <div class="col-md-3">
-<label for="blood_group_id">Blood Group </label>
+<label>Blood Group </label>
 </div>
 <div class="col-md-9">
-<select class="form-control" placeholder="select" name="blood_group_id" id="blood_group_id">
- <option value="0">--Select Blood Group--</option>
+<select class="form-control" placeholder="select" name="blood_group">
+ <option value="volvo">Select Blood Group</option>
 				<option value="A+">A+</option>
 				<option value="A-">A-</option>
 				<option value="B+">B+</option>
@@ -141,29 +137,7 @@
 </div>
 </div>
 
-<div class="row">
-<div class="form-group col-md-6">
-<div class="col-md-3" style="">
-<label for="ddlMonth">Last Donation </label>
-</div>
-<div class="col-md-9">
-<div class="row">
-<div class="col-sm-4">
-<select class="Month form-control" placeholder="select" name="ddlMonth" id="ddlMonth" onchange="return donationYear(this.value)">
-<option value="0">--Select Month--</option>
-<option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
-</div>
-<div class="col-sm-4">
-<select class="form-control" placeholder="select" name="ddlYear" id="ddlYear" onchange="return donationMonth(this.value)">
-<option value="0">--Select Year--</option>
-<option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option></select>
-</div>
-</div>
-</div>
-</div>
-</div>
-																								 
-<div class="row">
+	<div class="row">
 <div class="text-center" style="margin-top: 10px;">
 <button type="submit" class="btn btn-success btn-lg defaultBtn" id="btnSubmit" name="btnSubmit" value="Submit">Submit</button>
 <button type="button" class="btn btn-danger btn-lg" onclick="window.location.href=window.location.href">Reset</button>
