@@ -577,6 +577,7 @@ input.input100 {
 
 /*------------------------------------------------------------------
 [ Button ]*/
+
 .container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -586,7 +587,6 @@ input.input100 {
   display: flex;
   flex-wrap: wrap;
 }
-
 .login100-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -597,9 +597,9 @@ input.input100 {
   align-items: center;
   padding: 0 20px;
   min-width: 160px;
-  height: 50px;
+  height: 40px;
   background-color: #57b846;
-  border-radius: 25px;
+  border-radius: 10px;
 
   font-family: Poppins-Regular;
   font-size: 16px;
@@ -612,10 +612,19 @@ input.input100 {
   transition: all 0.4s;
 }
 
+
 .login100-form-btn:hover {
   background-color: #333333;
 }
+/* log*/
+.log .login100btn .btn
+ {
+  margin-left: 5px;
+  min-width: 160px;
+  height: 40px;
+  padding:center;
 
+}
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
@@ -721,6 +730,7 @@ input.input100 {
               margin-top:100px;
               margin-bottom: 100px;
 
+
  }
  .find-blood h3{
   padding-left: 20px;
@@ -728,7 +738,8 @@ input.input100 {
  }
  .find-blood select {
    padding-left: 20px;
-   margin-left: 70px;
+   margin-left: 80px;
+
 
  }
  .bg-orange-ope{
@@ -767,3 +778,39 @@ input.input100 {
   color: #fff;
   text-decoration: none;
 }
+/*T*/
+#customers {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 90%;
+margin-top:100px;
+margin-left:80px;
+}
+
+#customers td, #customers th {
+border: 1px solid #E8ADAD;
+padding: 8px;
+text-align:center;
+}
+table:after{
+    display: block;
+    clear: both;
+    content: "";
+  }
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+#customers:after{
+    clear: both;
+    display: block;
+    content: "";
+}
+#customers th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+background-color: #ED1B1B;
+color: white;
+}
+#customers th:hover{
+ background-color: #D01010;  
