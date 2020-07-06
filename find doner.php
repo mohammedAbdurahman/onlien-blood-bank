@@ -15,7 +15,12 @@
         
     </head>
     <body>
-
+<div class="tb">
+    <div class="container">
+       <h3>Find Blood Donor</h3>
+    </div>   
+ </div>
+ 
 <?php
 session_start();
 include 'dbconnect.php';
@@ -30,10 +35,10 @@ if($row=mysqli_fetch_array($result)){
 
 echo"<table border='1' id='customers'>
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th> Name</th>
+                <th>email</th>
                 <th>Address</th>
-                <th>Contact</th>
+                <th>mobile</th>
                 <th>Gender</th>
                 <th>Blood Group</th>
             </tr>";
@@ -41,7 +46,7 @@ echo"<table border='1' id='customers'>
 
     echo "<tr>
                 <td>".$row['fname']."</td>
-                <td>".$row['email_id']."</td>
+                <td>".$row['email']."</td>
                 <td>".$row['address']."</td>
                 <td>".$row['mobile']."</td>
                 <td>".$row['gender']."</td>

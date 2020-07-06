@@ -22,11 +22,10 @@
       <div class="wrap-login100">
         <div class="login100-form-title" style="background-image: url(images/shutterstock.jpg);">
           <span class="login100-form-title-1">
-            Sign In
-          </span>
+admin          </span>
         </div>
 
-        <form action="successdonor.php" method="post" class="login100-form validate-form">
+        <form action="admin.php" method="post" class="login100-form validate-form">
           <div  class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
             <span class="label-input100">Username</span>
             <input class="input100" type="text" name="uname" placeholder="Enter username">
@@ -38,12 +37,19 @@
             <input class="input100" type="password" name="psw" placeholder="Enter password">
             </div>
 
+          <div class="flex-sb-m w-full p-b-30">
+            <div class="contact100-form-checkbox">
+              <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+              <label class="label-checkbox100" for="ckb1">
+                Remember me
+              </label>
+            </div>
+          </div>
          
-          <div class="log"    style="margin-top: 20px;" > 
+          <div class="log"> 
             <div class="btn btn btn-success"> 
            <button type="submit" name="btnSubmit" value="Submit"> Login</button>
             </div>
-             <a href="register.html" class="btn btn btn-primary "> Sign Up</a>
             </div>
           </div>
         </div>

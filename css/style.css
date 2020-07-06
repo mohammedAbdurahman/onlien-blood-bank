@@ -282,6 +282,7 @@ body      {
               padding-top: 60px;
               padding-bottom: 30px;
               font-size: 15px;
+              margin-bottom: 0;
              }
              .page-footer .btn-floating{
             color:  #dc3545;
@@ -298,6 +299,9 @@ body      {
 
             }
             /*login*/
+            .log .btn{
+              margin-top: 20px;
+            }
             input {
   outline: none;
   border: none;
@@ -778,13 +782,27 @@ input.input100 {
   color: #fff;
   text-decoration: none;
 }
+/*find-blood-bank*/
+.find-blood-bank {
+  background-color:rgba( 169,169,169,0.1); 
+              padding-bottom: 40px;
+       border: 1PX;
+              margin-bottom: 100px;
+              color: #000000;
+}
+.find-blood .bank{
+  margin-bottom: 40PX;
+}
+
+
 /*T*/
 #customers {
 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 border-collapse: collapse;
 width: 90%;
-margin-top:100px;
-margin-left:80px;
+margin-top:10px;
+margin-left:70px;
+margin-bottom: 70px;
 }
 
 #customers td, #customers th {
@@ -813,4 +831,19 @@ background-color: #ED1B1B;
 color: white;
 }
 #customers th:hover{
- background-color: #D01010;  
+ background-color: #D01010; 
+ } 
+ /*registersuccess*/ 
+ .succes{
+  padding-top: 70px;
+ }
+ /*login admin*/
+ .login_admin{
+  padding-top:
+ }
+ /*about*/
+ .About{
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+ }

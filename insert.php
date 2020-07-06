@@ -2,13 +2,11 @@
 
 	if(isset($_POST['fname'])){
 		$fname=$_POST['fname'];
-		$email_id=$_POST['email_id'];
-		$mobile=$_POST['mobile'];
+		$email=$_POST['email'];
 		$address=$_POST['address'];
+		$mobile=$_POST['mobile'];
 		$gender=$_POST['gender'];
 		$blood_group=$_POST['blood_group'];
-	
-		
 
 		$servername="localhost";
 		$username="root";
@@ -21,7 +19,7 @@
 		die("Error while connecting...");
 	}
 	
-	$qry="insert into blood(fname , email_id , mobile ,address,gender,blood_group) values ('$fname','$email_id','$mobile','$address','$gender','$blood_group')";
+	$qry="insert into blood(fname,email,address,mobile,gender,blood_group) values ('$fname','$email','$address','$mobile','$gender','$blood_group')";
 	$result=mysqli_query($conn,$qry);
 
 	if($result){
